@@ -249,7 +249,7 @@ public class MenuUtama extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
+                        .addGap(146, 146, 146)
                         .addComponent(btnpelanggan)
                         .addGap(35, 35, 35)
                         .addComponent(btnproduk, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,6 +365,11 @@ public class MenuUtama extends javax.swing.JFrame {
         transaksi.setText("Transaksi");
 
         penjualan.setText("Penjualan");
+        penjualan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                penjualanActionPerformed(evt);
+            }
+        });
         transaksi.add(penjualan);
 
         jMenuBar1.add(transaksi);
@@ -522,7 +527,7 @@ new MenuUtama().setVisible(true);          // TODO add your handling code here:
     }//GEN-LAST:event_logoutActionPerformed
 
     private void RecaplaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecaplaporanActionPerformed
-      // TODO add your handling code here:
+new FormLapTransaksi().setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_RecaplaporanActionPerformed
 
     private void laporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laporanActionPerformed
@@ -536,6 +541,10 @@ new FormAbout().setVisible(true);        // TODO add your handling code here:
     private void TentangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TentangActionPerformed
 new FormAbout().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_TentangActionPerformed
+
+    private void penjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penjualanActionPerformed
+new FormPenjualan().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_penjualanActionPerformed
 
     
                                          

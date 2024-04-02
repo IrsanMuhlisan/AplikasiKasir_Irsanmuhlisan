@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Mar 2024 pada 04.45
+-- Waktu pembuatan: 02 Apr 2024 pada 07.12
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -40,9 +40,13 @@ CREATE TABLE `detailpenjualan` (
 --
 
 INSERT INTO `detailpenjualan` (`DetailID`, `ProdukID`, `Harga`, `JumlahProduk`, `Subtotal`) VALUES
-('D', 'B002', 175000, 1, 175000),
 ('DIDP001', '123', 75000, 2, 150000),
-('DIDP002', 'B002', 175000, 2, 350000);
+('DIDP002', '124', 120000, 1, 120000),
+('DIDP003', '123', 75000, 2, 150000),
+('DIDP004', '123', 75000, 1, 75000),
+('DIDP005', '124', 120000, 1, 120000),
+('DIDP006', '124', 120000, 2, 240000),
+('DIDP007', '123', 75000, 1, 75000);
 
 -- --------------------------------------------------------
 
@@ -86,7 +90,7 @@ CREATE TABLE `pelanggan` (
 INSERT INTO `pelanggan` (`PelangganID`, `NamaPelanggan`, `Alamat`, `NomorTelepon`) VALUES
 ('122', 'novita', 'purbaratu', '0894562595'),
 ('123', 'anisaa', 'bbedahan', '0225625962'),
-('124', 'irsan', 'leuwianyar', '0822155236');
+('124', 'irsan', 'pelang', '0822155236');
 
 -- --------------------------------------------------------
 
@@ -107,8 +111,13 @@ CREATE TABLE `penjualan` (
 --
 
 INSERT INTO `penjualan` (`PenjualanID`, `DetailID`, `TanggalPenjualan`, `JamPenjualan`, `TotalHarga`) VALUES
-('1', 'DIDP001', '2024-02-28', '11:20:09', 150000),
-('B', 'DIDP002', '2024-02-28', '12:29:33', 350000);
+('IDP001', 'DIDP001', '2024-04-01', '13:17:55', 150000),
+('IDP002', 'DIDP002', '2024-04-01', '13:18:16', 120000),
+('IDP003', 'DIDP003', '2024-04-01', '13:59:23', 150000),
+('IDP004', 'DIDP004', '2024-04-01', '13:59:54', 75000),
+('IDP005', 'DIDP005', '2024-04-01', '14:29:25', 120000),
+('IDP006', 'DIDP006', '2024-04-01', '14:32:20', 240000),
+('IDP007', 'DIDP007', '2024-04-02', '11:04:21', 75000);
 
 -- --------------------------------------------------------
 
@@ -128,12 +137,11 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`ProdukID`, `NamaProduk`, `Harga`, `Stok`) VALUES
-('123', 'Kalung', 75000, 13),
-('124', 'Lipstik', 120000, 10),
+('123', 'Kalung', 75000, 7),
+('124', 'Lipstik', 120000, 6),
 ('B002', 'Hoodie', 175000, 25),
-('B003', 'Crewneck', 145000, 30),
-('B004', 'T-shirt Oversize', 90000, 25),
-('D001', 'vintage shirt', 250000, 15);
+('B003', 'Crewneck', 145000, 300),
+('B004', 'T-shirt Oversize', 90000, 25);
 
 --
 -- Indexes for dumped tables

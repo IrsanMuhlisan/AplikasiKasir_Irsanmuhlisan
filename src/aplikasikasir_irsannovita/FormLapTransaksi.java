@@ -213,7 +213,7 @@ public class FormLapTransaksi extends javax.swing.JFrame {
 try {
     int row = tblLapTransaksi.getSelectedRow();
     String tabelKlik = (tblLapTransaksi.getModel().getValueAt(row, 1).toString());
-    String sql = "select *from tbl_detailpenjualan where DetailID=?";
+    String sql = "select *from detailpenjualan where DetailID=?";
     pst = konek.prepareStatement(sql);
     pst.setString(1, tabelKlik);
     rst = pst.executeQuery();
